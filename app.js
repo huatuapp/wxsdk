@@ -12,5 +12,5 @@ App({
     apimain: 'https://app-alpha.huatu.com/',//请求接口主域名
     userInfo: null
   }
-
+  
 })
