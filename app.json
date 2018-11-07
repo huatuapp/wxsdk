@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/createOrder/createOrder",
+    "pages/myOrder/myOrder",
+    "pages/logs/logs",
+    "pages/live/live",
+    "pages/login/login",
+    "pages/courseDetail/courseDetail",
+    "pages/notify/notify",
+    "pages/videoPlay/videoPlay",
+    "pages/dropList/dropList",
+    "pages/cutText/cutText",
+    "pages/ygCourse/list",
+    "pages/category/category",
+    "pages/myCourse/myCourse",
+    "pages/ygDetail/detail",
+    "pages/areaList/areaList"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1aad19",
+    "navigationBarTitleText": "华图分校小程序sdk",
+    "navigationBarTextStyle": "white"
+  }
+}
