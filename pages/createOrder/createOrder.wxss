@@ -1,0 +1,41 @@
+/* pages/createOrder/createOrder.wxss */
+
+page,button {
+  font-size: 32rpx;
+}
+
+.create-order {
+  padding: 20rpx;
+  text-align: center;
+  color: #fff;
+  background: #1aad19;
+}
+
+.order-tip {
+  color: red;
+}
+
+.to-create {
+  position: fixed;
+  height: 45px;
+  line-height: 45px;
+  width: 100%;
+  text-align: center;
+  bottom: 0rpx;
+}
+
+.shopping-icon {
+  width: 45rpx;
+  height: 45rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.to-pay {
+  position: fixed;
+  height: 45px;
+  line-height: 45px;
+  width: 100%;
+  text-align: center;
+  bottom: 0rpx;
+}

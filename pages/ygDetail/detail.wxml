@@ -1,0 +1,51 @@
+<!--pages/ygDetail/detail.wxml-->
+<!--pages/courseDetail/courseDetail.wxml-->
+<!--载入html解析模板-->
+<import src="../../wxsdk/cryptojs/lib/htmlTransference/wxParse/wxParse.wxml" />
+<view class="content">
+  <view class='items-list' wx:if="{{detail}}">
+    <view class="course-detail">{{course_detail}}</view>
+
+  
+      <view class='pro-body'>
+        <view class='pro-title'>{{detail.name}}</view>
+        <view class="pro-free">{{detail.price==0?'免费':detail.price}}</view>             
+      </view>
+
+
+    <view class='teacher_list'>{{teacher_list}}</view>
+    <view class='teacher-con' wx:if="{{detail.lectors}}">
+      <view class='teacher-item' wx:for="{{detail.lectors}}" wx:key="i" wx:if="{{index<10}}">
+        <view class='teacher-avatar'><image src="{{item.avatar}}"/></view>
+        <view class='teacher-name'>{{item.name}}</view>
+      </view>
+    </view>
+    <view wx:else>暂无教师数据</view>
+
+    <view class='lesson-num'>{{lesson_num}}：{{detail.course_hour}}</view>
+    <view class='lesson-con' wx:if="{{detail.classes}}">
+      <view class='lesson-item' wx:for="{{detail.classes}}" wx:key="i" wx:for-index="key">
+        <view class="lesson-key">第{{key+1}}讲</view>
+        <view class='lesson-name'>{{lesson_name}}:
+        <text class="click-name" bindtap='play' data-class-id="{{item.id}}" data-course-id='{{detail.product_id}}'>{{item.name}}</text>
+        </view>
+        <view class='lesson-duration'>{{lesson_duration}}:{{item.start_time}}</view>
+      </view>
+    </view>
+    <view wx:else>暂无课时数据</view>
+
+    <view class="detail-intro">课程简介</view>
+    <view class="intro-con" wx:if="{{detail && detail.intro}}">
+      <view class="intro">
+      <!--调用html模板解析方法-->
+      <template is="wxParse" data="{{wxParseData:intro.nodes}}" />
+      </view>
+    </view>
+    <view wx:else>暂无课程简介</view>
+  </view>
+  <view wx:else>
+    <text>暂无数据</text>
+  </view>
+</view>
+
+

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "drop-list": "/wxsdk/components/dropList/dropList",
+    "cut-text": "/wxsdk/components/cutText/cutText"
+  },
+  "enablePullDownRefresh": true
+}

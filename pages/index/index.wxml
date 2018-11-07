@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+    <view wx:for="{{navigators}}" wx:key='no' class="item">
+        <navigator url="{{item.url}}"
+                   hover-class="navigator-hover">{{item.title}}
+        </navigator>
+    </view>
+</view>

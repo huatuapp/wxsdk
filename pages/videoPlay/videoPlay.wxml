@@ -1,0 +1,2 @@
+<!--pages/videoPlay/videoPlay.wxml-->
+<web-view src="{{url}}"></web-view>

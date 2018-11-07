@@ -1,0 +1,80 @@
+/* pages/myCourse/myCourse.wxss */
+
+page {
+  background: #eee;
+  font-size: 32rpx;
+}
+
+.ygCourse-item {
+  padding: 18rpx;
+  margin: 25rpx 0rpx;
+  background: #fff;
+}
+
+.ygCourse-lector {
+  font-size: 28rpx;
+}
+
+.cxj-icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 5px;
+}
+
+.course-item {
+  /* overflow:hidden; */
+  padding: 30rpx;
+  margin: 25rpx 0rpx;
+  background: #fff;
+  flex-direction: row;
+  display: flex;
+}
+
+.course-logo {
+  width: 100%;
+  height: 100%;
+  min-height: 160rpx;
+}
+
+.course-body {
+  padding-left: 30rpx;
+  /* margin-left: 210rpx; */
+}
+
+.left-box {
+  width: 40%;
+}
+
+.right-box {
+  position: relative;
+  padding-left: 20rpx;
+  width: 150rpx;
+  flex: 1;
+}
+
+.course-name {
+  color: blue;
+  font-size: 26rpx;
+  line-height: 1;
+}
+
+.course-teacherName {
+  margin-top: 30rpx;
+  font-size: 26rpx;
+  color: #212121;
+  line-height: 1.2;
+}
+
+.course-duration {
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #212121;
+  line-height: 1.2;
+}
+
+.no_course-teacherName {
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: red;
+  line-height: 1.2;
+}

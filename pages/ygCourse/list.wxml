@@ -1,0 +1,29 @@
+<!--pages/ygCourse/list.wxml-->
+<view class="course-wrap">
+  <view wx:if="{{datalist}}">
+      <view class="list" wx:for="{{datalist}}" wx:key="i">
+      <navigator url="/pages/ygDetail/detail?source=1&cid={{item.product_id}}">
+        <text class="course-name">{{item.name}}</text>
+        <view class="course-time">
+          <text wx:if="{{item.time_desc}}" class="course-section">{{item.time_desc}}</text>
+          <text class="course-nums">{{item.course_hour}} 课时</text>
+        </view>
+        <view class="list-bot-box">
+          <view class="teacher-list">
+            <view class='teacher-li' wx:for="{{item.lectors}}" wx:key="no">
+              <image src='{{item.thumb}}' class='teacher-avatar'></image>
+              <text class='teacher-name'>{{item.name}}</text>
+            </view>
+          </view>
+          <view class="list-bottom">
+            <text class="course-price">{{item.price==0?'免费':item.price}}</text>
+            <view class="course-profile"><text wx:if="{{item.show_time_status == 3}}">剩余 <text class="color-red">{{item.show_time}}</text> 天停售</text> <text><text class="color-red"> {{item.persons_num}}</text> 人已购</text></view>
+          </view>
+        </view>
+        </navigator>
+      </view>
+  </view>
+  <view class="nodata_text" wx:else>
+      <button size="default"> 暂无数据 </button>        
+  </view>
+</view>

@@ -1,0 +1,65 @@
+/* pages/myOrder/myOrder.wxss */
+
+page {
+  font-size: 32rpx;
+}
+
+.order-title {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 20rpx;
+  text-align: center;
+  color: #fff;
+  background: #1aad19;
+}
+.order-box {
+  padding: 10rpx 0;
+  color: #666;
+  background: #eee;
+}
+
+.order-item {
+  padding: 18rpx;
+  margin: 25rpx 0rpx;
+  background: #fff;
+  justify-content: space-between;
+}
+
+.order-sn, .order-status {
+  font-size: 26rpx;
+}
+
+.order-status {
+  display: flex;
+  color: #f00;
+}
+
+.order-thumb {
+  width: 100%;
+  height: 100%;
+  min-height: 160rpx;
+}
+
+.p-box {
+  flex-direction: row;
+  display: flex;
+  padding-top: 20rpx;
+}
+
+.left-box {
+  width: 45%;
+}
+
+.right-box {
+  position: relative;
+  padding-left: 20rpx;
+  width: 150rpx;
+  flex: 1;
+}
+
+.order-amount {
+  position: absolute;
+  top: 90rpx;
+}

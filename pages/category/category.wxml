@@ -1,0 +1,10 @@
+<!--pages/category/category.wxml-->
+<!-- tab栏flex布局 -->
+<view class="category">
+  <view class="cate-item" wx:for="{{datalist}}" wx:key="id">
+    <text class="big-name" data-id="{{item.id}}">{{item.id}}--{{item.name}}</text>
+    <view wx:for="{{item.child}}" wx:for-item="child" wx:key="id">
+      <text data-index="{{key}}" data-item-id="{{item.id}}" data-id="{{index}}" >---{{child}}---</text>
+    </view>
+  </view>
+</view>

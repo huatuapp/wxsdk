@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "drop-list": "/wxsdk/components/dropList/dropList"
+  }
+}

@@ -1,0 +1,35 @@
+<!--pages/myCourse/myCourse.wxml-->
+<!-- tab栏flex布局 -->
+<drop-list tabTxt="{{tabTxt}}" style="" catch:getList="getList"></drop-list>
+<view>
+  <view wx:if="{{courseType==2}}">
+    <block wx:for="{{myCourse}}" wx:for-index="d" wx:key="{{myCourseKey}}">
+      <view class="ygCourse-item" style="flex-direction:row; display: flex;justify-content:space-between">
+        <view>
+          <view class="ygCourse-name">{{item.name}}</view>
+          <view class="ygCourse-lector">{{item.lector}}</view>
+        </view>
+        <view style="display: flex;align-items:center">
+          <!-- <image src="../../images/angle-right.png" class="cxj-icon"></image> -->
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='course-list' wx:else>
+    <view class='course-item' wx:for="{{myCourse}}" wx:key="">
+      <view class="left-box">
+        <image class='course-logo' mode="widthFix" src="{{item.thumb}}"></image>
+      </view>
+      <view class='right-box'>
+        <view class='course-name' bindtap='toDetail' data-index='{{item.cid}}'>{{item.name}}</view>
+        <view class='course-teacherName' wx:if="{{item && item.teacher_name}}">{{item.teacher_name}}</view>
+        <view wx:else class="no_course-teacherName">暂无教师数据</view>
+        <view class='course-duration'>{{item.duration}}分</view>
+      </view>
+    </view>
+  </view>
+    <view wx:if="{{showmessage}}">
+    <view style="padding:20rpx 0;text-align:center;lign-height:34rpx">
+      <image style="width:34rpx" mode="widthFix" src="/images/empty.png" />{{message}} </view>
+  </view>
+</view>

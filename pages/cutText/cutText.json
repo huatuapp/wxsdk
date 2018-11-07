@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "cut-text": "/wxsdk/components/cutText/cutText"
+  }
+}

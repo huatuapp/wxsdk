@@ -1,0 +1,7 @@
+.area{
+  border:solid 1px;
+  float:left;
+  margin:10rpx 10rpx 0 10rpx;
+  background-color:gray;
+  color:white;
+}

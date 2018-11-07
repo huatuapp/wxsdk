@@ -1,0 +1,112 @@
+/* pages/ygDetail/detail.wxss */
+
+.course-detail{
+  width:100%;
+  margin-top:5rpx;
+  padding-left:20rpx;
+  background-color: #adadad;
+  color: white;
+}
+
+.pro-item{
+  overflow:hidden;
+  padding:20rpx;
+}
+
+.pro-logo{
+  float:left;
+  width: 190rpx;
+  height: 190rpx;
+}
+.pro-body,.intro{
+  padding: 10px;
+}
+
+.pro-title, .pro-free, .pro-price, .pro-true_price{
+  color: #212121;
+  font-size: 35rpx;
+  line-height: 1.5;
+}
+.pro-free{
+  color: red;
+}
+
+.teacher_list{
+  width:100%;
+  margin-top:5rpx;
+  padding-left:20rpx;
+  background-color: #adadad;
+  color: white;
+}
+
+.teacher-con{
+  width:100%;
+  padding: 20rpx;
+  overflow: hidden;
+}
+
+.teacher-item{
+  float:left;
+  padding-right:20rpx;
+}
+
+.teacher-avatar image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.teacher-name{
+  font-size:26rpx;
+  color: #9a9a0a;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.lesson-num{
+  width:100%;
+  margin-top:5rpx;
+  padding-left:20rpx;
+  background-color: #adadad;
+  color: white;
+}
+
+.lesson-con{
+  width:100%;
+  padding: 20rpx;
+  overflow: hidden;
+}
+
+.lesson-item{
+  padding-bottom:30rpx;
+}
+
+.lesson-name{
+  font-size:28rpx;
+  line-height: 1.2;
+}
+
+.click-name{
+  color: #00008b;
+}
+
+.lesson-duration{
+  font-size:28rpx;
+  line-height: 1.2;
+}
+
+.lesson-key{
+  color:#9a9a0a;
+}
+
+.detail-intro{
+  width:100%;
+  margin-top:5rpx;
+  padding-left:20rpx;
+  background-color: #adadad;
+  color: white;
+}
+
+.intro{
+  padding-top: 10rpx;
+}

@@ -1,0 +1,9 @@
+<!--pages/notify/notify.wxml-->
+<view style="margin:100rpx 20rpx 0;padding:10rpx 0 10rpx 10rpx;border:1rpx solid #7E8C8D;color:#3699DC">
+<view>支付回调地址</view>
+<view style="border-bottom:1px solid #7E8C8D"></view>
+ <block wx:for="{{notify.data}}" wx:for-index="d" wx:key="{{notifyKey}}">
+  <view style="color:#E84C3D">{{item.title}}:</view>
+  <view style="font-size:32rpx;color:#2A7FB8">{{item.url}}</view>
+  </block>
+</view>
