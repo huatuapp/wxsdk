@@ -1,0 +1,15 @@
+<!--pages/cutText/cutText.wxml-->
+<view style="margin:100rpx 20rpx 0;padding:10rpx 0 10rpx 10rpx;border:1rpx solid #7E8C8D;color:#3699DC">
+<view style="color:#E84C3D">-------------原始字符串----------------</view>
+<text>{{str}}</text>
+<view style="color:#E84C3D">---------------截取20--------------------</view>
+<cut-text cutText="{{str}}" length='20'></cut-text>
+<view style="color:#E84C3D">---------------截取10--------------------</view>
+<cut-text cutText="{{str}}" length='10'></cut-text>
+<view style="color:#E84C3D">--------------不定义length-----------</view>
+<cut-text cutText="{{str}}" ></cut-text>
+<view style="color:#E84C3D">------------截取10加省略号…---------</view>
+<cut-text cutText="{{str}}" length='10' ellipsis="true"></cut-text>
+<view style="color:#E84C3D">----------从第3个开始截取10---------</view>
+<cut-text cutText="{{str}}" begin="2" length='10'></cut-text>
+</view>

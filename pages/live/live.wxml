@@ -1,0 +1,26 @@
+<!--pages/live/live.wxml-->
+
+<view class='content'>
+      <view wx:if="{{datalist}}">
+        <block wx:for="{{datalist}}" wx:key='n'>
+          <view class="nav_items">
+          <!--界面跳转 -->
+            <navigator url="/pages/courseDetail/courseDetail?source=1&cid={{item.cid}}">
+              <image src="{{item.thumb}}"></image>
+              <text>{{item.name}}</text>
+            </navigator>
+            <view class='showinfo'>
+              <view class="teachername">{{item.teacher_name}}</view>
+              <view class="buyer">{{item.user_num}}人参与</view>
+            </view>
+            <view class='showinfo'>
+              <view class="teachername color-price">{{item.is_free == 0?item.true_price:'免费'}}</view>
+              <view class="buyer">{{item.type == 0?item.begin_time:'录播'}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="nodata_text" wx:else>
+        <button size="default"> 暂无数据 </button>        
+      </view>
+</view>

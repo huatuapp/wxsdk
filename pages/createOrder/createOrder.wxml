@@ -1,0 +1,17 @@
+<!--pages/createOrder/createOrder.wxml-->
+<view class="create-order">
+  创建订单
+</view>
+<view class="order-info"wx:if="{{createOrder}}">
+  <view class="order-tip">{{createOrder.message}}</view>
+  <view wx:if="{{createOrder.code==200}}">
+    <view>订单号：{{createOrder.data.order_sn}}</view>
+    <view>订单金额：¥{{createOrder.data.order_price}}</view>
+  </view>
+  <button class="to-pay" type="primary" bindtap="toPay">支付 </button>
+</view>
+<view wx:else>
+<!-- data-source 来源参数 1 学习平台 2 腰果  data-cid 下单购买课程id -->
+  <button class="to-create" type="warn" bindtap="createOrder" data-source="2" data-cid="3510"><image src="/images/shopping-trolley.png" class="shopping-icon"></image>提交订单</button>
+  <!-- <button class="to-create" type="warn" bindtap="createOrder" data-source="2" data-cid="4987">提交订单 </button> -->
+</view>

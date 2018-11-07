@@ -1,0 +1,13 @@
+<!-- tab栏flex布局 -->
+<view class="cxj-menu">
+  <view class="flex-view{{item.active?' active':''}}" wx:for="{{tabTxt}}" wx:key="" data-index="{{index}}" bindtap="filterTab">
+    <text>{{item.text}}</text>
+    <image src="../../images/angle-down.png" class="cxj-icon"></image>
+  </view>
+</view>
+<!-- tab下拉选项布局 -->
+<view class="cxj-tab-layout" hidden="{{!item.active}}" wx:for="{{tabTxt}}" wx:key="" wx:for-item="item" data-index="{{index}}" bindtap="filterTabChild">
+  <!-- <view class="{{item.type==0?'active':''}}" data-id="0" data-index="0" bindtap="">不限</view> -->
+  <view class="{{item.type==item_child.id?'active':''}}" wx:for="{{item.child}}" wx:for-item="item_child" wx:key="" data-id="{{item_child.id}}" data-index="0" data-txt="{{item_child.text}}" bindtap="">{{item_child.text}}</view>
+</view>
+<view class="cxj-place-box"></view>

@@ -1,0 +1,52 @@
+<!--pages/courseDetail/courseDetail.wxml-->
+<!--载入html解析模板-->
+<import src="../../wxsdk/cryptojs/lib/htmlTransference/wxParse/wxParse.wxml" />
+<view class="content">
+  <view class='items-list' wx:if="{{detail}}">
+    <view class="course-detail">{{course_detail}}</view>
+    <view class='pro-item'>
+      <image class='pro-logo' src="{{detail.thumb}}"></image>
+      <view class='pro-body'>
+        <view class='pro-title'>{{course_name}}:{{detail.name}}</view>
+        <view class='pro-free' wx:if="{{detail.is_free==0}}">{{free}}:{{is_free}}</view>
+        <view class='pro-free' wx:else>{{free}}:{{not_is_free}}</view>
+        <view class='pro-price'>{{price}}:{{detail.price}}</view>
+        <view class='pro-true_price'>{{true_price}}:{{detail.true_price}}</view>
+      </view>
+    </view>
+
+    <view class='teacher_list'>{{teacher_list}}</view>
+    <view class='teacher-con' wx:if="{{detail.teacher && detail.teacher[0]}}">
+      <view class='teacher-item' wx:for="{{detail.teacher}}">
+        <view class='teacher-avatar'><image src="{{item.avatar}}"/></view>
+        <view class='teacher-name'>{{item.nickname}}</view>
+      </view>
+    </view>
+    <view wx:else>暂无教师数据</view>
+
+    <view class='lesson-num'>{{lesson_num}}：{{detail.lesson_num}}</view>
+    <view class='lesson-con' wx:if="{{detail.lesson && detail.lesson[0]}}">
+      <view class='lesson-item' wx:for="{{detail.lesson}}" wx:for-index="key">
+        <view class="lesson-key">第{{key+1}}讲</view>
+        <view class='lesson-name'>{{lesson_name}}:
+        <text class="click-name" bindtap='toLive' data-index='{{item.bjy_url}}'>{{item.name}}</text>
+        </view>
+        <view class='lesson-duration'>{{lesson_duration}}:{{item.duration}}</view>
+      </view>
+    </view>
+    <view wx:else>暂无课时数据</view>
+
+    <view class="detail-intro">课程简介</view>
+    <view class="intro-con" wx:if="{{detail && detail.intro}}">
+      <view class="intro">
+      <!--调用html模板解析方法-->
+      <template is="wxParse" data="{{wxParseData:intro.nodes}}" />
+      </view>
+    </view>
+    <view wx:else>暂无课程简介</view>
+  </view>
+  <view wx:else>
+    <text>暂无数据</text>
+  </view>
+</view>
+

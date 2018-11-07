@@ -1,0 +1,12 @@
+/**index.wxss**/
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.item {
+    padding: 10px;
+    background: white;
+    text-align:center;
+    width:100%;
+    border:1px solid #eee;
+}

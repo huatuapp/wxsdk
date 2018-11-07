@@ -1,0 +1,19 @@
+<!--pages/dropList/dropList.wxml-->
+<drop-list tabTxt="{{tabTxt}}"  style="" bindgetList="getList"></drop-list>
+
+<view style="margin:100rpx 20rpx 0;border:1rpx solid #7E8C8D;color:#3699DC" wx:if="{{detail}}">
+<view style="">返回的数据：</view>
+<view style="color:#E84C3D">
+searchParamId: [
+<text wx:for="{{detail.searchParamId}}" wx:key="">{{item}},</text>
+]
+</view>
+<view style="color:#E84C3D">
+searchParamText: [
+<text  wx:for="{{detail.searchParamText}}" wx:key="">{{item}},</text>
+]
+</view>
+<view style="border-bottom:1px solid #7E8C8D"></view>
+说明文档：
+<view style="font-size:32rpx;color:#2A7FB8">/wxsdk/components/dropList/README.md</view>
+</view>

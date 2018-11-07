@@ -1,0 +1,79 @@
+/* 菜单样式开始 */
+
+.cxj-menu {
+  background-color: #fff;
+  width: 750rpx;
+  height: 80rpx;
+  display: flex;
+  position: fixed;
+  flex-wrap: nowrap;
+  z-index: 100;
+}
+
+.cxj-menu .active image {
+  transform: rotate(180deg);
+  background: none;
+}
+
+.cxj-menu .active {
+  background-color: #fff;
+}
+
+.flex-view {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.cxj-icon {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.cxj-content {
+  width: 750rpx;
+  font-size: 28rpx;
+}
+
+.cxj-content-li {
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.cxj-tab-layout {
+  width: 750rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 80rpx;
+  z-index: 1;
+  border-bottom: solid 1px #eee;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(000, 000, 000, 0.5);
+}
+
+.cxj-tab-layout .active {
+  color: #00aa14;
+}
+
+.cxj-tab-layout view {
+  width: 750rpx;
+  text-indent: 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1rpx solid #e7e7e7;
+  background-color: #fff;
+}
+
+.cxj-place-box {
+  height: 80rpx;
+}
+
+/* 菜单样式结束*/

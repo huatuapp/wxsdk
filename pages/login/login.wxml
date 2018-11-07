@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && !hasBindMobile}}" type="primary" open-type="getUserInfo" bindgetuserinfo="userLogin"> 登录 </button>
+    <button wx:if="{{hasUserInfo && !hasBindMobile}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 绑定手机号 </button>
+    <block wx:if="{{hasUserInfo && hasBindMobile}}">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatar}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickname}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto" bindtap='loginout'>{{motto}}</text>
+  </view>
+</view>

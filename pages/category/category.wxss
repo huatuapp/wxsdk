@@ -1,0 +1,5 @@
+/* pages/category/category.wxss */
+.category{padding: 20rpx;}
+.category .cate-item{
+  border-top:1px solid #999;
+}

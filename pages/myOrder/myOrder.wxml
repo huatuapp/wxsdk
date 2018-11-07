@@ -1,0 +1,39 @@
+<!--pages/myOrder/myOrder.wxml-->
+<!-- <view class="order-title">我的订单列表</view> -->
+<!-- tab栏flex布局 -->
+<drop-list tabTxt="{{tabTxt}}" style="" catch:getList="getList"></drop-list>
+<!-- 数据列表 -->
+<view class="order-box">
+  <block wx:for="{{myOrder}}" wx:for-index="d" wx:key="{{myOrderKey}}">
+    <view class="order-item">
+      <!-- 1 -->
+      <view style="flex-direction:row; display: flex;justify-content:space-between">
+        <view class="order-sn">订单号：{{item.sn}}</view>
+        <!-- 支付状态:0为未付款,1为已付款,2为已取消，3为退款订单 ，4-支付中，6部分退款 -->
+        <view class="order-status">
+          <text wx:if="{{item.status==0}}">未付款</text>
+          <text wx:if="{{item.status==1}}">已付款</text>
+          <text wx:elif="{{item.status==2}}">已取消</text>
+          <text wx:elif="{{item.status==3}}">已退款</text>
+          <text wx:elif="{{item.status==4}}">支付中</text>
+        </view>
+      </view>
+      <!-- 2 -->
+      <view class="p-box">
+        <view class="left-box">
+          <image class="order-thumb" mode="widthFix" src="{{item.course_thumb}}"></image>
+        </view>
+        <view class="right-box">
+          <view class="order-name"><cut-text cutText="{{item.order_name}}" length="25"></cut-text></view>
+          <view class="order-amount">¥
+            <text style="color:red">{{item.amount}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view wx:if="{{showmessage}}">
+    <view style="padding:20rpx 0;text-align:center;lign-height:34rpx">
+      <image style="width:34rpx" mode="widthFix" src="/images/empty.png" />{{message}} </view>
+  </view>
+</view>

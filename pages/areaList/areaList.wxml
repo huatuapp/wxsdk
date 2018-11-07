@@ -1,0 +1,3 @@
+<view class="list-item" wx:for="{{list}}" wx:for-index="key" wx:for-item="value">
+  <view class="area" data-id='{{key}}'>{{value}}</view>
+</view>

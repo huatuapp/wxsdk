@@ -1,0 +1,81 @@
+/* pages/live/course.wxss */
+/*主盒子*/  
+.content{  
+  /*右侧盒子使用了绝对定位*/  
+  position: absolute;  
+  top: 0;  
+  right: 0;  
+  flex: 1;  
+  /*宽度75%，高度占满，并使用百分比布局*/  
+  width: 100%;
+  padding: 20rpx;  
+  box-sizing: border-box;  
+  background: #ffff;
+  padding-bottom:130rpx;  
+} 
+/*右侧栏list的item*/  
+.content .nav_items{  
+  /*浮动向左*/  
+  float: left;  
+  /*每个item设置宽度是33.33%*/  
+  width: 50%; 
+
+  text-align: left;
+  overflow: hidden;
+}  
+.content .nav_items image{  
+  /*被图片设置宽高*/  
+  width: 348rpx;  
+  height: 214rpx;  
+  margin-top: 24rpx;  
+}  
+.content .nav_items .showinfo{
+  height: 30rpx;
+}
+.content .nav_items text{  
+  /*给text设成块级元素*/  
+  display: block;  
+  height: 70rpx;
+  margin-top: 32rpx;  
+  font-size: 24rpx;  
+  color: black;
+  font-weight: bold;
+  /*设置文字溢出部分为...*/  
+  overflow: hidden;  
+  white-space: normal;  
+  text-overflow: ellipsis;  
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+} 
+.nodata_text{
+  width: 750rpx;
+  height: 800rpx;
+}
+.nodata_text image
+{
+  width:100%;
+  height:100%; 
+} 
+.teachername{
+  width: 50%;
+  font-size: 26rpx;
+  color: #8c929d;
+  overflow: hidden;  
+  white-space: nowrap;  
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.buyer{
+  width: 50%;
+  font-size: 22rpx;
+  color: #8c929d;
+}
+.showinfo{
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  padding-right: 20rpx;
+  padding-top: 20rpx;
+}
+.color-price{color: red;}
+.nodata_text text{text-align: center;}
