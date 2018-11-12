@@ -23,6 +23,9 @@ Page({
     var that = this;
     data.cid = e.currentTarget.dataset.cid;//need 课程ID  Required
     data.source_type = e.currentTarget.dataset.source;//need 课程来源  Required
+    data.name=''//收件人名字  
+    data.address='';//收件人地址
+    data.mobile='';//收件人电话
     var returndata = createOrder.createOrder(data).then(
       function (result) {
         if (result.code == 200){
