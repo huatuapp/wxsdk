@@ -48,7 +48,7 @@ Page({
   },
   userLogin:function (e) {
     var _this = this;
-    login.login().then(function(logFlag){
+    login.login(e).then(function(logFlag){
       if(logFlag.code == 200){
         _this.setData({
           hasBindMobile: true,
@@ -90,10 +90,20 @@ Page({
     }
   },
   loginout: function (e) {
-    wx.clearStorage();
-    this.setData({
-      hasBindMobile: false,
-      hasUserInfo: false
-    })
+    var that = this;
+    wx.removeStorage({
+      key: "wxUserInfo",
+      success:function(res){
+        wx.removeStorage({
+          key: "userinfo",
+          success: function (res) {
+            that.setData({
+              hasBindMobile: false,
+              hasUserInfo: false
+            })
+          }
+        });
+      }
+    });
   }
 })
