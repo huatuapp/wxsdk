@@ -9,30 +9,34 @@ App({
         //session_key 未过期，并且在本生命周期一直有效
         var session_key = wx.getStorageSync('session_key');
         if (session_key == "") {
-          var params = {
-            "appid": that.globalData.appid,
-            "jscode": res.code,
-            "timestamp": Date.now().toString().substring(0, 10)
-          };
-          var str = '';
-          var arr = Object.keys(params);
-          arr.sort();
-          for (var i in arr) {
-            str += arr[i] + "=" + params[arr[i]] + "&"
-          }
-          params.sign = MakeMd5.md5(str + "key=" + that.globalData.signSecret).toUpperCase();
-          wx.request({
-            url: that.globalData.apimain + "wxapp/user/wx_session_key",
-            data: params,
-            header: {
-              "Content-Type": "application/json"
-            },
-            method: 'GET',
-            success: (res) => {
-              wx.setStorageSync('session_key', res.data.data);
-            },
-            fail: (res) => {
-              console.log(res);
+          wx.login({
+            success: res => {
+              var params = {
+                "appid": that.globalData.appid,
+                "jscode": res.code,
+                "timestamp": Date.now().toString().substring(0, 10)
+              };
+              var str = '';
+              var arr = Object.keys(params);
+              arr.sort();
+              for (var i in arr) {
+                str += arr[i] + "=" + params[arr[i]] + "&"
+              }
+              params.sign = MakeMd5.md5(str + "key=" + that.globalData.signSecret).toUpperCase();
+              wx.request({
+                url: that.globalData.apimain + "wxapp/user/wx_session_key",
+                data: params,
+                header: {
+                  "Content-Type": "application/json"
+                },
+                method: 'GET',
+                success: (res) => {
+                  wx.setStorageSync('session_key', res.data.data);
+                },
+                fail: (res) => {
+                  console.log(res);
+                }
+              })
             }
           })
         }
